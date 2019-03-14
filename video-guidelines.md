@@ -60,9 +60,21 @@ You should always record:
 - In Full HD, 1920x1080
 - Using the NTSC-film framerate, the most common on the web and cameras: 30/1.001 or ~29.97
 
+#### Program layout
+
+Use one of the default interfaces and, when possible, the default interaction mode for the program covered in the video.
+
+E.g. for Blender 2.80 and up, left click is the default to select and grab objects. As viewers stumble upon videos organically and generally won't watch them in a particular order, the tutorials should stay close to the programs' default settings. There are some exceptions for tools like the shell, vim, or emacs that, once you've learned the basics, you are meant to customize a lot.
+
+- For Godot, before recording, go to Editor -> Editor Layout -> Default to reset the interface.
+- For Krita, I recommend using the Big Paint workspace over the default, as it centers the canvas on screen. It also shows the Layers, color palette, tool options, document overview, brushes, toolbox, and advanced color selector: everything you need to paint is visible on screen.
+
+#### Font size
+
 The font size should be large enough for the video to read on a tablet, or depending on the video, on a large mobile phone in landscape orientation. If the program supports it, increase the font size to 20pt or more.
 
 For instance, in Godot, I use 20pt for the editor's font and 23pt for the code. Past 20pt, the editor's layout can feel too packed.
+
 
 ### Audio
 
