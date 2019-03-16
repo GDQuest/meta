@@ -60,11 +60,19 @@ You should always record:
 - In Full HD, 1920x1080
 - Using the NTSC-film framerate, the most common on the web and cameras: 30/1.001 or ~29.97
 
+Your footage should be smooth, not choppy. You should remove anything that can distract the viewer from the tutorial from the screen: notifications, messaging client, etc. Make the program full-screen whenever possible.
+
+Be careful not to wave the mouse cursor as you talk. Put the mouse or stylus down when you're talking and not pointing at anything in particular. The motion can be distracting.
+
+Also, make sure that the sound you record from your internal sound card or speakers doesn't cover your voice. I keep the desktop audio channel at -20db to -30db most of the time in OBS Studio.
+
 #### Program layout
 
 Use one of the default interfaces and, when possible, the default interaction mode for the program covered in the video.
 
 E.g. for Blender 2.80 and up, left click is the default to select and grab objects. As viewers stumble upon videos organically and generally won't watch them in a particular order, the tutorials should stay close to the programs' default settings. There are some exceptions for tools like the shell, vim, or emacs that, once you've learned the basics, you are meant to customize a lot.
+
+Make the program **full-screen** whenever possible. Many programs use the <kbd>F11</kbd> key or a related shortcut for that.
 
 - For Godot, before recording, go to Editor -> Editor Layout -> Default to reset the interface.
 - For Krita, I recommend using the Big Paint workspace over the default, as it centers the canvas on screen. It also shows the Layers, color palette, tool options, document overview, brushes, toolbox, and advanced color selector: everything you need to paint is visible on screen.
@@ -108,3 +116,7 @@ The mouth and vocal folds move thanks to muscles. To articulate to your fullest 
 **The longer the recording session, the longer you should warm up**.
 
 Here's a [short vocal warm up](https://www.youtube.com/watch?v=9tXK7cw9mrg) from Julian Treasure's TED talk. You want to warm up your lips, your tongue, and your jaw. The siren exercise then focuses on the vocal cords. To improve pronunciation of specific sounds, add a few [tongue twisters](http://pun.me/pages/tongue-twisters.php): they'll serve both as an exercise and complete your warm up.
+
+## Video editing
+
+Avoid abrupt cuts in both the audio and the video. You should cut mistakes and long silences or hesitations, but avoid cutting too much between words. Especially if you are editing live footage: too many cuts and the video will feel robotic or sped up. There's a natural rhythm to the human speech that you want to preserve.
