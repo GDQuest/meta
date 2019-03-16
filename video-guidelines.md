@@ -6,6 +6,32 @@ The goal is to help us solidify both the form and the substance of our tutorials
 
 We're also leaving our guidelines open for fellow tutors to contribute, and for aspiring tutors to draw inspiration from.
 
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [GDquest video guidelines](#gdquest-video-guidelines)
+    - [We learn when we're engaged in an activity](#we-learn-when-were-engaged-in-an-activity)
+    - [Going past step-by-step](#going-past-step-by-step)
+        - [Code overviews](#code-overviews)
+        - [A middle-ground: pasting code snippets](#a-middle-ground-pasting-code-snippets)
+    - [We should teach techniques and concepts over recipes](#we-should-teach-techniques-and-concepts-over-recipes)
+    - [Keep the language simple](#keep-the-language-simple)
+    - [Video recording](#video-recording)
+        - [Video](#video)
+            - [Program layout](#program-layout)
+            - [Font size](#font-size)
+        - [Audio](#audio)
+            - [Setting up the microphone](#setting-up-the-microphone)
+            - [Drinks](#drinks)
+            - [Mouth noises](#mouth-noises)
+            - [Warming up](#warming-up)
+            - [Take your time](#take-your-time)
+    - [Video editing](#video-editing)
+
+<!-- markdown-toc end -->
+
+
 ## We learn when we're engaged in an activity
 
 Until now, our videos have been showing solutions to problems, but we've rarely even tried to engage the viewer directly. Practice is essential to learning. Putting what you learned in your own words, and applying what you're learning, as you're learning it. So is getting sufficient feedback for every step that we take learning a given discipline.
@@ -48,6 +74,28 @@ With the API in place, you can quickly explain the class's responsibility and ho
 Then paste blocks of code one by one to show a way to implement the solution and flesh out the details.
 
 The tutorials don't have to cover every single line. We can also have pre-built methods or extra objects done and hidden from the viewer. Anything that's not relevant to the tutorial, but required for the demo to work.
+
+## We should teach techniques and concepts over recipes
+
+> Give a man a fish and you feed him for a day; teach a man to fish, and you feed him for a lifetime.
+
+Although we learn from practice and examples, as tutors, we can help the learners go one step further: learn the general, reusable technique or concept behind the examples.
+
+We're here to teach more than a series of steps to solve a specific problem. We're here to help people learn to solve problems on their own, regardless of the situation they are facing. To help them become independent, not reliant on step-by-step guides. Our videos should help people understand that game creation isn't a linear process and that independent creators don't have strict recipes to follow.
+
+The idea applies to game programming as well: the principles we use and the way we structure our code are more important than the exact implementation we choose.
+
+When you create a tutorial on a given topic, try to offer more than a description of what each line of code does. You can explain the thought process that led you to structure your project in a certain way, mention other potential solutions you could try, their advantages and drawbacks. If you decide to teach a pattern, explain its general form. You can also indicate the limits of your example or the tutorial compared to a real-world scenario. Game code can get complicated and messy once you start to connect systems.
+
+## Keep the language simple
+
+To me, the ability to explain complex topics in fairly simple terms is a sign of mastery and maturity. Mastery because it takes a great deal of experience to boil down a technique or a concept to its essence. Maturity as pride or one's ego can prevent us from making hard-learned knowledge accessible to everyone else.
+
+The domains we teach are hard to learn. Our role as tutors is to ease the students into learning. There are terms we can't work around: a developer must learn about variables, functions, loops, classes, objects, etc. However, there's no need for unending sentences, academic terms, or rare vocabulary in our tutorials. We should make each tutorial as accessible as we can to its target audience.
+
+Depending on the intended audience for a given series, we can assume that the student has a certain amount of experience. The viewer should already be comfortable with all basic programming concepts to follow a video about pathfinding in 3d, or about a programming pattern like State.
+
+It's a balancing act. The idea isn't to dumb down the lesson, but to do our best to keep the form as clean and as fluid as possible so that the learner can focus their attention on the substance.
 
 ## Video recording
 
@@ -116,6 +164,10 @@ The mouth and vocal folds move thanks to muscles. To articulate to your fullest 
 **The longer the recording session, the longer you should warm up**.
 
 Here's a [short vocal warm up](https://www.youtube.com/watch?v=9tXK7cw9mrg) from Julian Treasure's TED talk. You want to warm up your lips, your tongue, and your jaw. The siren exercise then focuses on the vocal cords. To improve pronunciation of specific sounds, add a few [tongue twisters](http://pun.me/pages/tongue-twisters.php): they'll serve both as an exercise and complete your warm up.
+
+#### Take your time ####
+
+If you're struggling to explain something while recording, clap, and take the time to breathe and to think. Rehearse the complex idea in your mind or in front of the microphone. You can leave the recording running in the meantime. When you're ready, do a clean and confident take. It's easy to edit the long silence out later.
 
 ## Video editing
 
