@@ -24,7 +24,7 @@ To create modular and composable systems, we have to manage boundaries: the plac
     1. [Avoid Null](#avoid-null-like-the-plague)
     1. [Use Static types](#use-static-types)
     1. [Write self-documenting Code](#write-self-documenting-code-and-use-comments-sparingly)
-        1. [Use comments if they save time or add key explanations](#use-comments-if-they-save-time-or-add-key-explanations)  
+        1. [Use comments if they save time or add key explanations](#use-comments-if-they-save-time-or-add-key-explanations)
 1. [System Design and Interactions](#system-design-and-interactions)
     1. [Every node and scene should run on its own](#every-node-and-scene-should-run-on-its-own)
     1. [Use signals to coordinate time-dependent interactions](#use-signals-to-coordinate-time-dependent-interactions)
@@ -321,7 +321,7 @@ We need some high-level guidelines to avoid producing coupled code. We can test 
 Godot's main functionality relies on its node tree, a recursive data structure: if we pick any node in the tree, this node, together with all of its children, is a complete tree in itself. You can see and think about it as an independent scene.
 
 <a name="fig1"></a>
-![](./imgs/scene_tree.png)
+![](./img/scene_tree.png)
 
 Fig. 1: _Screenshot of a real system scene tree layout from [OpenRPG]_
 
@@ -330,7 +330,7 @@ In the example above, you can view each node as a separate scene, be it `Board` 
 If we save `QuestSystem` using `Save Branch as Scene`, we should be able to run this scene locally, with <kbd>F6</kbd>, without any error. In this case we can't expect to have the same behavior as when we play the main `Game` scene, as it could depend on other data to show all its potential, but it should still run without any errors.
 
 <a name="fig2"></a>
-![](./imgs/orpg_quest_system.gif)
+![](./img/orpg_quest_system.gif)
 
 Fig. 2: _Example of how systems should work independently, even if they aren't a part of the main scene._
 
@@ -360,7 +360,7 @@ So **rely on signals when orchestrating time-dependent interactions.**
 Through GDScript, Godot prefers a coding style that is loose and free of any burden. This can quickly lead to spaghetti code since there's no mechanism by which Godot enforces nodes/scenes to be isolated. So it's up to us to keep track and implement this isolation.
 
 <a name="fig3"></a>
-![](./imgs/node_closeup.png)
+![](./img/node_closeup.png)
 
 Fig. 3: _A Node/Scene is composed of state (![state]) and behavior (![behavior])_
 
@@ -373,7 +373,7 @@ In [Fig. 3] above, there's a depiction of a typical node/scene in Godot. It bund
 Even a simple scene tree like the one in [Fig. 4] can quickly become unmaintainable if all the flexibility Godot offers us isn't managed. Thus we need a way to maintain the number of potential connections as depicted in [Fig. 3].
 
 <a name="fig4"></a>
-![](./imgs/scene_tree_overview.png)
+![](./img/scene_tree_overview.png)
 
 Fig. 4: _A relatively simple depiction of a Godot scene tree. The highlighted part represents a completely independent scene_
 
@@ -399,7 +399,7 @@ Here are a few ideas that could improve code maintainability and overall structu
 1. Break up complex functions into smaller functions (ideally up to 10-15 lines of code and no more) and give them descriptive names
 
 <a name="fig5"></a>
-![](./imgs/orpg_scene_tree.png)
+![](./img/orpg_scene_tree.png)
 
 Fig. 5: _[OpenRPG](https://github.com/razcore-art/godot-open-rpg) experimental branch scene tree. Note how `Board` with its `PathFinder` algorithm is at the same level as `Party`. They're independent systems in this implementation. The `Party` node/scene can be viewed as the player object._
 
@@ -605,12 +605,12 @@ This way, we can encapsulate signal connections in the related nodes instead of 
 Having a global `Events` dependency isn't a major issue. If we want to reuse code in other projects that don't implement this pattern, we can do a search and replace to get rid of all the `Events.*` declarations.
 
 [OpenRPG]: https://github.com/GDquest/godot-open-rpg
-[state]: ./imgs/node_state.png
-[behavior]: ./imgs/node_behavior.png
-[inner_connection]: ./imgs/node_inner_connection.png
-[state_connection]: ./imgs/node_state_connection.png
-[behavior_connection]: ./imgs/node_behavior_connection.png
-[signal_connection]: ./imgs/node_signal_connection.png
+[state]: ./img/node_state.png
+[behavior]: ./img/node_behavior.png
+[inner_connection]: ./img/node_inner_connection.png
+[state_connection]: ./img/node_state_connection.png
+[behavior_connection]: ./img/node_behavior_connection.png
+[signal_connection]: ./img/node_signal_connection.png
 [Fig. 1]: #fig1
 [Fig. 2]: #fig2
 [Fig. 3]: #fig3
