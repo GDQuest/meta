@@ -34,9 +34,61 @@ To create modular and composable systems, we have to manage boundaries: the plac
 
 ## Code Writing Style
 
-This section shows our programming style by example.
+This section explains our programming style by example.
 
-<!-- TODO: Add a short but complete, real-world example -->
+Here's a complete example that follows all the guidelines below:
+
+```gdscript
+extends Node
+class_name StateMachine
+"""
+Hierarchical State machine for the player.
+Initializes states and delegates engine callbacks (_physics_process, _unhandled_input) to the state.
+"""
+
+
+signal state_changed(previous, new)
+
+export var initial_state: = NodePath()
+
+onready var state: State = get_node(initial_state) setget set_state
+onready var _state_name: = state.name
+
+
+func _init() -> void:
+	add_to_group("state_machine")
+
+
+func _ready() -> void:
+	state.enter()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	state.unhandled_input(event)
+
+
+func _physics_process(delta: float) -> void:
+	state.physics_process(delta)
+
+
+func transition_to(target_state_path: String, msg: Dictionary = {}) -> void:
+	if not has_node(target_state_path):
+		return
+
+	var target_state: = get_node(target_state_path)
+	assert target_state.is_composite == false
+
+	state.exit()
+	self.state = target_state
+	state.enter(msg)
+	Events.emit_signal("player_state_changed", state.name)
+
+
+func set_state(value: State) -> void:
+	state = value
+	_state_name = state.name
+```
+
 Start with the `extends` keyword if the class extends a built-in type.
 
 Then include `class_name`, but only if necessary. E.g. if you need to check for this type in other classes, or to be able to create the node in the create node dialogue.
@@ -86,8 +138,11 @@ const TARGET_POSITION: = Vector2(2, 56)
 
 enum TileTypes { EMPTY=-1, WALL, DOOR }
 
-export(int) var number
+export var number: = 0
+export var is_active: = true
 ```
+
+_Note: for booleans, always include a name prefix like `is_`, `can_`, or `has_`._
 
 Following enums are public and pseudo-private member variables. Their names should use `snake_case`, `_snake_case_with_leading_underscore` respectively.
 
